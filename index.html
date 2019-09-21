@@ -114,7 +114,7 @@
 				<div class="col-sm-8">
 
 					<div class="remaining-time">
-						<div id="clock" class="simply-countdown simply-countdown-one"></div>
+						<div id="clock"></div>
 					</div><!-- remaining-time -->
 				</div><!-- col-sm-10 -->
 
@@ -326,30 +326,25 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 	<script src="common-js/bootstrap.js"></script>
 
-	<script src="common-js/jquery.countdown.min.js"></script>
+	<!-- <script src="common-js/jquery.countdown.min.js"></script> -->
 
 	<script src="common-js/jquery.fluidbox.min.js"></script>
 
 	<script src="common-js/scripts.js"></script>
 
-	<script src="scripts/simplyCountdown.js"></script>
+	<script src="scripts/countdown.js"></script>
 
-	<script>
-		var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
-		// default example
-		simplyCountdown('.simply-countdown-one', {
-				year: d.getFullYear(),
-				month: d.getMonth() + 1,
-				day: d.getDate()
-		});
+	<script type="text/javascript">
 
-		//jQuery example
-		$('#simply-countdown-losange').simplyCountdown({
-				year: d.getFullYear(),
-				month: d.getMonth() + 1,
-				day: d.getDate(),
-				enableUtc: false
-		});
+		$('#clock').countdown('2020/2/4', function(event){
+			var $this = $(this).html(event.strftime(''
+				+ '<div class="time-sec"><span class="title">%D</span> days </div>'
+				+ '<div class="time-sec"><span class="title">%H</span> hours </div>'
+				+ '<div class="time-sec"><span class="title">%M</span> minutes </div>'
+				+ '<div class="time-sec"><span class="title">%S</span> seconds </div>'
+			));
+		})
+
 	</script>
 
 </body>
