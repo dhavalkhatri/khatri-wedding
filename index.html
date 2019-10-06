@@ -55,7 +55,7 @@
 				</li>
 
 				<li><a href="03-regular-page.html">THER WEDDING</a></li>
-				<li><a href="#">GALLERY</a></li>
+				<li><a href="gallery.html">GALLERY</a></li>
 				<li><a href="02-rsvp.html">RSVP</a></li>
 			</ul><!-- main-menu -->
 
@@ -93,12 +93,12 @@
 					<p class="desc margin-bottom">A beautiful saying “A Perfect Marriage is just combination of two imperfect souls”
 					</p>
 
-					<p class="desc margin-bottom">Pankti, a gujju girl with lots of fun & emotions, a little quirky yet a beautiful soul was born & brought up in Gujarat where a contradictory to her, 
-						Harshal, a Mumbaikar is smart, intelligent, responsible yet a thoughtful person who lives in USA. 
-						Their story started at the preceding month of May’19, with some silly conversations, trying to know more about each other yet so much confusions in head. 
-						A few days later, on 5th of May’19 they both met in person in Mumbai, India. 
-						Without taking much time, they said YES & tied a knot on 9th May’19. 
-						It’s not always a Love that a person falls for, sometimes there are some stupid things that makes to fall in love and hence same things happened with both of these lovely people. 
+					<p class="desc margin-bottom">Pankti, a gujju girl with lots of fun & emotions, a little quirky yet a beautiful soul was born & brought up in Gujarat where a contradictory to her,
+						Harshal, a Mumbaikar is smart, intelligent, responsible yet a thoughtful person who lives in USA.
+						Their story started at the preceding month of May’19, with some silly conversations, trying to know more about each other yet so much confusions in head.
+						A few days later, on 5th of May’19 they both met in person in Mumbai, India.
+						Without taking much time, they said YES & tied a knot on 9th May’19.
+						It’s not always a Love that a person falls for, sometimes there are some stupid things that makes to fall in love and hence same things happened with both of these lovely people.
 						They both are looking forward for their Big Day!!! </p>
 
 				</div><!-- col-sm-10 -->
@@ -271,11 +271,33 @@
 				</div><!-- row -->
 			</div><!-- container -->
 		</div><!-- float-left -->
+		</script>
 
 		<div class="map-area">
 			<div id="map" style="height:100%;"></div>
 		</div><!-- map-area -->
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-oEyU88bRR6xcbV1gI_Cahc8ugKC_JPE&callback=initMap"></script>
+
+		<!-- Map functionality by Dhaval Khatri -->
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9JS5EbzjLHduoXUi5LRz8gv-QW5ICvis&callback=initMap">
+		</script>
+
+		<script>
+			function initMap() {
+				// var location = { lat: 20.916126, lng: 72.932965 }
+				var location = new google.maps.LatLng(20.268590, 72.986015)
+				var map = new google.maps.Map(document.getElementById("map"), {
+					zoom: 18,
+					center: location
+				});
+				var marker = new google.maps.Marker({
+					positon: new google.maps.LatLng(20.268590, 72.986015),
+					map: map,
+					visible: true
+				});
+				// marker.setMap(map);
+			}
+		</script>
+		<!-- Map functionality by Dhaval Khatri -->
 
 	</section><!-- section -->
 
