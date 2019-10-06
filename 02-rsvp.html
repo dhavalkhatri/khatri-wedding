@@ -52,7 +52,7 @@
 				</li>
 				
 				<li><a href="03-regular-page.html">THER WEDDING</a></li>
-				<li><a href="#">GELLERY</a></li>
+				<li><a href="#">GALLERY</a></li>
 				<li><a href="02-rsvp.html">RSVP</a></li>
 			</ul><!-- main-menu -->
 			
@@ -82,17 +82,20 @@
 					<div class="margin-bottom display-table">
 						<div class="display-table-cell">
 							
-							<div class="heading">
-								<h2 class="title">Contact Us</h2>
-								<i class="icon icon-star"></i>
-							</div>
+						<div class="heading">
+							<h3 class="title">Contact Us</h3>
+							<i class="icon icon-star"></i><i class="icon icon-star"></i><i class="icon icon-star"></i>
+							<h5><a href="tel:201-920-6500" class="phone">201-920-6500</a></h5>
+							<h4><a href="mailto:info@harshalwedspankti.com"><i class="icon icon-email-plane"></i>   info@harshalwedspankti.com</a></h4>
+							<i class="icon icon-star"></i><i class="icon icon-star"></i><i class="icon icon-star"></i>
+						</div>
 							
-							<p>On the 25 September 2017</p>
+<!-- 							<p>On the 25 September 2017</p>
 							<p>Join us as we celebrate life and love.</p>
 							<h3><a href="tel:784-412-0646" class="phone">784-412-0646</a></h3>
 							<h3><a href="tel:784-412-0245" class="phone">784-412-0245</a></h3>
 							<h5><a href="mailto:events@colorlib.com" class="email">events@colorlib.com</a></h5>
-							<p>14 Baria street 133/2, New York City, US</p>
+							<p>14 Baria street 133/2, New York City, US</p> -->
 							
 						</div><!-- display-table-cell -->
 					</div><!-- margin-bottom -->
@@ -145,11 +148,31 @@
 		</div><!-- container -->
 	</section><!-- section -->
 	
-	<div class="map-area">
-		<div id="map" style="height:100%;"></div>
-	</div><!-- map-area -->
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-oEyU88bRR6xcbV1gI_Cahc8ugKC_JPE&callback=initMap"></script>
-	
+			<div class="map-area">
+			<div id="map" style="height:100%;"></div>
+		</div><!-- map-area -->
+
+		<!-- Map functionality by Dhaval Khatri -->
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9JS5EbzjLHduoXUi5LRz8gv-QW5ICvis&callback=initMap">
+		</script>
+
+		<script>
+			function initMap() {
+				var location = { lat: 20.268590, lng: 72.986015 }
+				// var location = new google.maps.LatLng(20.268590, 72.986015)
+				var map = new google.maps.Map(document.getElementById("map"), {
+					zoom: 16,
+					center: location
+				});
+				var marker = new google.maps.Marker({
+					positon: new google.maps.LatLng(20.268590, 72.986015),
+					map: map,
+					visible: true
+				});
+				// marker.setMap(map);
+			}
+		</script>
+		<!-- Map functionality by Dhaval Khatri -->
 		
 	<footer>
 		<div class="container center-text">
@@ -187,9 +210,11 @@
 				<li><a href="#">CONTACT</a></li>
 			</ul>
 			
-			<p class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			<p class="copyright">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made by <b>Dhaval Khatri</b> in Colab with Colorlib
+			</p>
+
+			<!-- <p class="copyright"> | Made by <b>Dhaval Khatri</b> | </p> -->
 			
 		</div><!-- container -->
 	</footer>
