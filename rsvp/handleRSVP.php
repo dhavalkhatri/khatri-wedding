@@ -31,6 +31,13 @@
 
 	fclose($file);
 
+	$emailto = $email;
+	$subject = "RSVP Confirmation";
+	$message = "Hi $name,\n\n We appreciate you taking time out to RSVP. This is an automated message confirming that your RSVP has been received.\n We will be following up with addtional details as we get closer to the special day.\n\nMeanwhile, feel free to subscribe to harshalwedspankti.com from the website to receive updates.\n\nMany thanks,\nKhatri family.";
+	$headers = "From: rsvp@harshalwedspankti.com" . "\r\n";
+
+	mail($emailto, $subject, $message, $headers);
+
 ?>
 
 <html>
@@ -114,10 +121,11 @@
 		<div class="lds-heart display-table center-text"></div>
 		<div class="display-table center-text">
 			<h4>Your RSVP is being taken care of</h4>
+			<h5>Confirmation email have been sent to your email. (or Spam)</h5>
 		</div>
 	</body>
 
 	<script>
-		setTimeout("location.href = '../wedding-rsvp.html';",3000);
+		setTimeout("location.href = '../wedding-rsvp.html';",4000);
 	</script>	
 </html>
