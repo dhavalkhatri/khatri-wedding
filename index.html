@@ -38,30 +38,13 @@
 
 			<ul class="main-menu visible-on-click" id="main-menu">
 				<li><a href="index.html">HOME</a></li>
-				<li class="drop-down"><a href="#!">OUR STORIES<i class="icon icon-caret-down"></i></a>
-
-					<ul class="drop-down-menu">
-						<li><a href="#">FEATURED</a></li>
-						<li><a href="#">ABOUT</a></li>
-						<li class="drop-down"><a href="#!">CATEGORIES<i class="icon icon-caret-right"></i></a>
-							<ul class="drop-down-menu drop-down-inner">
-								<li><a href="#">FEATURED</a></li>
-								<li><a href="#">ABOUT</a></li>
-								<li><a href="#">CATEGORIES</a></li>
-							</ul>
-						</li>
-					</ul>
-
-				</li>
-
-				<li><a href="03-regular-page.html">THER WEDDING</a></li>
-				<li><a href="gallery.html">GALLERY</a></li>
-				<li><a href="02-rsvp.html">RSVP</a></li>
+				<li><a href="wedding-gallery.html">GALLERY</a></li>
+				<li><a href="wedding-rsvp.html">RSVP</a></li>
+				<li><a href="wedding-faqs.html">WEDDING FAQs</a></li>
 			</ul><!-- main-menu -->
 
 		</div><!-- container -->
 	</header>
-
 
 	<div class="main-slider">
 		<div class="display-table center-text">
@@ -158,7 +141,7 @@
 
 						<div class="w-detail right">
 							<i class="icon icon-home"></i>
-							<h4 class="title">Grah Santak</h4>
+							<h4 class="title">Grah Shanti</h4>
 							<h5 class="title">February 3, 2:00pm</h5>
 							<p>Pooja performed before a wedding for good cosmic energy from the nine planets of the solar system. </p>
 						</div><!-- w-detail -->
@@ -167,7 +150,7 @@
 							<i class="icon icon-ciurclke"></i>
 							<h4 class="title">Garba</h4>
 							<h5 class="title">February 3, 6:00pm</h5>
-							<p>Raas-Garba is a night of energetic and playful dancing that commonly takes place before weddings.</p>
+							<p>Raas-Garba is a night of energetic and playful dancing which will take before the wedding day.</p>
 						</div><!-- w-detail -->
 
 						<div class="w-detail right">
@@ -203,17 +186,14 @@
 				<div class="col-sm-12">
 
 					<div class="heading">
-						<h2 class="title">Wedding & Ceremonies</h2>
+						<h2 class="title">Contribute To The Website</h2>
 						<span class="heading-bottom"><i class="color-white icon icon-star"></i></span>
 					</div>
 
 					<div class="ceremony margin-bottom">
-						<p class="desc">We assist our clients in creating memorable, magical
-						celebrations that exceed expectations. Our personal approach ensures the weddings we
-						plan are meaningful and truly reflect our clients as individuals, as couples, and states
-						something about their shared values and sense of style.</p>
+						<p class="desc">Have any good pictures of the groom and bride? Contribute to the website by emailing the event photos to</p>
 
-						<a class="border-btn" href="#">LEARN MORE</a>
+						<a href="mailto:info@harshalwedspankti.com" class="border-btn">events@harshalwedspankti.com</a>
 					</div>
 
 				</div><!-- col-sm-10 -->
@@ -263,7 +243,7 @@
 
 						</div><!-- row -->
 
-						<a class="btn-2 margin-bottom gallery-btn" href="#">VIEW ALL GALLERY</a>
+						<a class="btn-2 margin-bottom gallery-btn" href="wedding-gallery.html">VIEW ALL GALLERY</a>
 
 					</div><!-- image-gallery -->
 
@@ -326,7 +306,6 @@
 
 	</section><!-- section -->
 
-
 	<footer>
 		<div class="container center-text">
 
@@ -340,8 +319,8 @@
 				<p>Join our mailing list to receive news and announcements</p>
 				<div class="email-area">
 					<form>
-						<input class="email-input" type="text" placeholder="Your Email">
-						<button class="submit-btn" type="submit"><i class="icon icon-email-plane"></i></button>
+						<input id="saveEmailInput" class="email-input" type="text" placeholder="Your Email">
+						<button class="submit-btn" type="button"><i class="icon icon-email-plane"></i></button>
 					</form>
 				</div><!-- email-area -->
 			</div><!-- newsletter -->
@@ -367,7 +346,9 @@
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made by <b>Dhaval Khatri</b> in Colab with Colorlib
 			</p> -->
 
-			<p class="copyright"> | Made by <b>Dhaval Khatri</b> | </p>
+						<p class="copyright">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made by <b>Dhaval Khatri</b> with Colorlib
+			</p>
 
 		</div><!-- container -->
 	</footer>
@@ -399,6 +380,20 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				+ '<div class="time-sec"><span class="title">%S</span> seconds </div>'
 			));
 		})
+
+		// function saveEmail(){
+		// 	const fso = new ActiveXObject("Scripting.FileSystemObject");
+		// 	var data = document.getElementById("saveEmailInput").value;
+
+		// 	// Write data in 'Output.txt' . 
+		// 	fso.openTextFile('subscribers.txt', data, (err) => { 
+			      
+		// 	    // In case of a error throw err. 
+		// 	    if (err) console.log(err); 
+		// 	})
+		// 	console.log("success")
+
+		// }
 
 	</script>
 
