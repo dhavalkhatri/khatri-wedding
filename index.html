@@ -26,6 +26,51 @@
 	<link href="01-homepage/css/responsive.css" rel="stylesheet">
 
 </head>
+
+<style>
+	#snackbar {
+	  visibility: hidden;
+	  min-width: 250px;
+	  margin-left: -125px;
+	  background-color: #333;
+	  color: #fff;
+	  text-align: center;
+	  border-radius: 2px;
+	  padding: 16px;
+	  position: fixed;
+	  z-index: 1;
+	  left: 50%;
+	  bottom: 30px;
+	  font-size: 17px;
+	}
+	
+	#snackbar.show {
+	  visibility: visible;
+	  -webkit-animation: fadein 0.5s, fadeout 0.5s 4.5s;
+	  animation: fadein 0.5s, fadeout 0.5s 4.5s;
+	}
+	
+	@-webkit-keyframes fadein {
+	  from {bottom: 0; opacity: 0;} 
+	  to {bottom: 30px; opacity: 1;}
+	}
+	
+	@keyframes fadein {
+	  from {bottom: 0; opacity: 0;}
+	  to {bottom: 30px; opacity: 1;}
+	}
+	
+	@-webkit-keyframes fadeout {
+	  from {bottom: 30px; opacity: 1;} 
+	  to {bottom: 0; opacity: 0;}
+	}
+	
+	@keyframes fadeout {
+	  from {bottom: 30px; opacity: 1;}
+	  to {bottom: 0; opacity: 0;}
+	}
+</style>
+
 <body>
 
 	<header>
@@ -38,7 +83,7 @@
 
 			<ul class="main-menu visible-on-click" id="main-menu">
 				<li><a href="index.html">HOME</a></li>
-				<li><a href="wedding-gallery.html">GALLERY</a></li>
+				<li><a href="#" class="comingsoon">GALLERY</a></li>
 				<li><a href="wedding-rsvp.html">RSVP</a></li>
 				<li><a href="wedding-faqs.html">WEDDING FAQs</a></li>
 			</ul><!-- main-menu -->
@@ -167,12 +212,6 @@
 							<p>The priest joins the hands of both together while blessing upon them all good wishes for a happy and healthy wedded life.</p>
 						</div><!-- w-detail -->
 
-<!-- 						<div class="w-detail left">
-							<i class="icon icon-camera"></i>
-							<h4 class="title">PHOTOGRAPHY</h4>
-							<p>Look at the most passionate ceremony ever. We wish happiness to the wedding couple.</p>
-						</div>w-detail -->
-
 					</div><!-- wedding-details -->
 
 				</div><!-- col-sm-10 -->
@@ -193,7 +232,7 @@
 					<div class="ceremony margin-bottom">
 						<p class="desc">Have any good pictures of the groom and bride? Contribute to the website by emailing the event photos to</p>
 
-						<h5><a href="mailto:info@harshalwedspankti.com" class="border-btn">events@harshalwedspankti.com</a></h5>
+						<h5><a href="mailto:events@harshalwedspankti.com" class="border-btn">events@harshalwedspankti.com</a></h5>
 					</div>
 
 				</div><!-- col-sm-10 -->
@@ -217,33 +256,37 @@
 					<div class="image-gallery">
 						<div class="row">
 
-							<div class="col-md-4 col-sm-6">
+							<!-- <div class="col-md-4 col-sm-6">
 								<a href="gallery/harshal-pankti-1.jpg" data-fluidbox><img class="margin-bottom" src="gallery/harshal-pankti-1.jpg" alt="Gallery Image" height = '600' width = '50'></a>
-							</div><!-- col-sm-4 -->
+							</div>
 
 							<div class="col-md-4 col-sm-6">
 								<a href="gallery/harshal-pankti-2.jpg" data-fluidbox><img class="margin-bottom" src="gallery/harshal-pankti-2.jpg" alt="Gallery Image"></a>
-							</div><!-- col-sm-4 -->
+							</div>
 
 							<div class="col-md-4 col-sm-6">
 								<a href="gallery/harshal-pankti-4.jpg" data-fluidbox><img class="margin-bottom" src="gallery/harshal-pankti-4.jpg" alt="Gallery Image"></a>
-							</div><!-- col-sm-4 -->
+							</div>
 
 							<div class="col-md-4 col-sm-6">
 								<a href="gallery/harshal-pankti-5.jpg" data-fluidbox><img class="margin-bottom" src="gallery/harshal-pankti-5.jpg" alt="Gallery Image"></a>
-							</div><!-- col-sm-4 -->
+							</div>
 
 							<div class="col-md-4 col-sm-6">
 								<a href="gallery/harshal-pankti-6.jpg" data-fluidbox><img class="margin-bottom" src="gallery/harshal-pankti-6.jpg" alt="Gallery Image"></a>
-							</div><!-- col-sm-4 -->
+							</div>
 
 							<div class="col-md-4 col-sm-6">
 								<a href="gallery/harshal-pankti-7.jpg" data-fluidbox><img class="margin-bottom" src="gallery/harshal-pankti-7.jpg" alt="Gallery Image"></a>
-							</div><!-- col-sm-4 -->
+							</div> -->
+
+							<div class="col-md-* col-sm-*">
+								<video class="img-fluid" src="harshalwedspankti.mp4" controls="controls" tabindex="0" autoplay="autoplay"></video>
+							</div>
 
 						</div><!-- row -->
 
-						<a class="btn-2 margin-bottom gallery-btn" href="wedding-gallery.html">VIEW ALL GALLERY</a>
+						<a class="btn-2 margin-bottom gallery-btn comingsoon" href="">VIEW ALL GALLERY</a>
 
 					</div><!-- image-gallery -->
 
@@ -304,6 +347,8 @@
 		<!-- Map functionality by Dhaval Khatri -->
 
 	</section><!-- section -->
+
+	<div id="snackbar">Gallery is not available at this moment but hang in there!</div>
 
 	<footer>
 		<div class="container center-text">
@@ -380,19 +425,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			));
 		})
 
-		// function saveEmail(){
-		// 	const fso = new ActiveXObject("Scripting.FileSystemObject");
-		// 	var data = document.getElementById("saveEmailInput").value;
-
-		// 	// Write data in 'Output.txt' . 
-		// 	fso.openTextFile('subscribers.txt', data, (err) => { 
-			      
-		// 	    // In case of a error throw err. 
-		// 	    if (err) console.log(err); 
-		// 	})
-		// 	console.log("success")
-
-		// }
+		$('.comingsoon').on('click', function($e){
+			$e.preventDefault();
+			var x = document.getElementById("snackbar");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+		});
 
 	</script>
 
