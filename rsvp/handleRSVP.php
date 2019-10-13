@@ -33,7 +33,7 @@
 
 	$emailto = $email;
 	$subject = "RSVP Confirmation";
-	$message = "Hi $name,\n\n We appreciate you taking time out to RSVP. This is an automated message confirming that your RSVP has been received.\n We will be following up with addtional details as we get closer to the special day.\n\nMeanwhile, feel free to subscribe to harshalwedspankti.com from the website to receive updates.\n\nMany thanks,\nKhatri family.";
+	$message = "Hi $name,\n\nWe appreciate you taking time out to RSVP. This is an automated message confirming that your RSVP has been received.\nWe will be following up with addtional details as we get closer to the special day.\n\nMeanwhile, feel free to subscribe to harshalwedspankti.com from the website to receive updates.\n\nMany thanks,\nKhatri family.";
 	$headers = "From: rsvp@harshalwedspankti.com" . "\r\n";
 
 	mail($emailto, $subject, $message, $headers);
